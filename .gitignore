@@ -1,3 +1,28 @@
+# PlatformIO
+.pio
+.pioenvs
+.piolibdeps
+.vscode
+*.code-workspace
+
+# Documentation working files
+docs/_build/
+
+# Python Files
+__pycache__
+*.pyc
+
+# PyInstaller Files
+firmware/build
+firmware/dist
+firmware/*.spec
+
+# Project files
+.picasa*
+
+# PCB and Schematic File Backups
+*.*\#[0-9]
+
 # Prerequisites
 *.d
 
@@ -27,6 +52,8 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
+*.exe
+!flashFirmware.exe
+!flashFirmware_win.exe

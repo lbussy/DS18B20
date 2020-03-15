@@ -1,0 +1,22 @@
+{
+    "name": "DS18B20",
+    "keywords": "DS18B20,Dallas,Semiconductor,Temperature,sensor,asynchronuous",
+    "description": "Library for DS18B20 restricted to a single sensor per pin. Rewritten minimalistic version of Dallas Temperature Control Library of Miles Burton.",
+    "authors": [
+        {
+            "name": "Lee Bussy",
+            "email": "lee@bussy.org",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lbussy/DS18B20.git"
+    },
+    "version": "0.1.1a",
+    "frameworks": "arduino",
+    "platforms": "*",
+    "export": {
+        "include": ""
+    }
+}
