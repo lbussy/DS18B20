@@ -23,7 +23,7 @@
 #ifndef DS18B20_H
 #define DS18B20_H
 
-#define DS18B20_LIB_VERSION "0.1.1a
+#define DS18B20_LIB_VERSION "0.1.1a"
 
 #include <OneWire.h>
 
