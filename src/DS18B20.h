@@ -1,7 +1,7 @@
-//    FILE: DS18B20.h
-//  AUTHOR: lee@bussy.org
+// FILE: DS18B20.h
+// AUTHOR: lee@bussy.org
 // VERSION: 0.1.1a
-//    DATE: 2020-03-15
+// DATE: 2020-03-15
 //
 // PUPROSE: library for DS18B20 temperature sensor with minimal footprint
 //

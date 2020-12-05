@@ -1,14 +1,14 @@
-//    FILE: DS18B20.cpp
-//  AUTHOR: lee@bussy.org
+// FILE: DS18B20.cpp
+// AUTHOR: lee@bussy.org
 // VERSION: 0.1.1a
-//    DATE: 2020-03-15
+// DATE: 2020-03-15
 //
 // PUPROSE: library for DS18B20 temperature sensor with minimal footprint
 //
 // HISTORY:
 // 0.1.0	2017-07-25 initial version
 // 0.1.1 	2020-02-18 added getAddress()
-// 0.1.1a 2020-03-15 added getTempF()
+// 0.1.1a   2020-03-15 added getTempF()
 
 #include "Arduino.h"
 #include "DS18B20.h"
@@ -59,16 +59,18 @@ float DS18B20::getTempC(void)
 
     int16_t rawTemperature = (((int16_t)scratchPad[TEMP_MSB]) << 8) | scratchPad[TEMP_LSB];
 
-    float temp = 0.0625 * rawTemperature;
-    if (temp < -55)
+    if (rawTemperature == -1)
         return DEVICE_DISCONNECTED_C;
+
+    float temp = 0.0625 * rawTemperature;
     return temp;
 }
 
 float DS18B20::getTempF(void)
 {
     float retVal = getTempC();
-    if (retVal < DEVICE_DISCONNECTED_C)
+
+    if (retVal == (float)DEVICE_DISCONNECTED_C)
         return DEVICE_DISCONNECTED_F;
     else
         return retVal * 1.8 + 32;
